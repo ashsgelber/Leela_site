@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Leela Mukherjee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="background">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <!-- Glow Filter -->
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- Circuit Paths -->
+            <path class="circuit" d="M50 50 H1150 V150 H100 V250 H1050 V350 H150" />
+            <path class="circuit glow" d="M200 200 V700 H1000 V600 H300 V500 H900" />
+            <path class="circuit" d="M100 400 H1100 V450 H50 V500 H1150" />
+            <path class="circuit glow" d="M300 100 H900 V200 H400 V300 H850" />
+            <path class="circuit" d="M400 700 H800 V750 H500 V780 H700" />
+            <path class="circuit glow" d="M150 650 V100 H1100 V750 H200" />
+            <path class="circuit" d="M250 50 H1150 V100 H200 V150 H1000 V200 H250" />
+            <path class="circuit glow" d="M150 300 V600 H1050 V250 H350 V700 H900" />
+        </svg>
+    </div>
+
+    <!-- Centralized Content -->
+    <div class="content">
+        <h1>Leela Mukherjee</h1>
+        <!-- <p>Aspiring Computer Engineer</p> -->
+        <div class="buttons">
+            <a href="resume.html">Education</a>
+            <a href="projects.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
