@@ -66,18 +66,30 @@ svg {
     text-align: center;
     z-index: 1; /* Ensure it's above the circuits */
     background-color: #002244; /* Matches background color to "mask" the circuits */
-    padding: 2rem 1rem;
-    box-sizing: border-box;
+    padding: 2rem 1rem; /* Reduced padding */
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Adjusted for smaller screens */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     color: #FFB300;
     text-shadow: 0 0 10px #000; /* Text glow effect */
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Lines next to the name */
+h1::before, h1::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #FFB300;
 }
 
 p {
@@ -90,9 +102,8 @@ p {
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem; /* Reduced gap for smaller screens */
     flex-wrap: wrap;
-    padding: 1rem;
 }
 
 .buttons a {
@@ -100,8 +111,8 @@ p {
     text-decoration: none;
     background-color: #FFB300; /* Maize background */
     color: #002244; /* Blue text */
-    font-size: 0.9rem;
-    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
     border: 2px solid #FFB300;
     border-radius: 8px;
     text-transform: uppercase;
@@ -124,37 +135,22 @@ p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem; /* Further reduced padding for small screens */
+    }
+
     h1 {
         font-size: 2rem;
     }
 
-    p {
-        font-size: 1rem;
-    }
-
     .buttons a {
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-size: 0.7rem;
     }
 
     .buttons {
-        gap: 0.5rem;
-    }
-
-    .buttons a {
-        font-size: 0.7rem;
-        padding: 0.4rem 0.8rem;
+        gap: 0.3rem;
     }
 }
