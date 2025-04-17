@@ -291,3 +291,19 @@ p {
     line-height: 1.4;
     color: #FFB300;
 }
+
+.project-entry {
+    margin-top: 2rem; /* space between projects */
+}
+
+.about-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #FFB300;
+}
+
+.about-text a {
+    color: #FFB300;
+    text-decoration: underline;
+}
